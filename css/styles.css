@@ -14,6 +14,17 @@
 }
 
 
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+
 body {
     color: var(--primary-text-color);
     font-family: "Roboto", sans-serif;
@@ -23,6 +34,12 @@ body {
 
 li {
     list-style-type: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -68,10 +85,12 @@ ul {
     max-height: 80px;
 }
 
+
 .nav-link,
 .nav-contact {
     display: flex;
 }
+
 
 .nav-link {
     margin-left: 93px;
@@ -82,9 +101,11 @@ ul {
     margin-left: 50px;
 }
 
+
 .nav-link .item + .item {
     margin-left: 50px;
 }
+
 
 .nav-contact {
     margin-left: auto;
@@ -110,7 +131,7 @@ ul {
 }
 
 
-.adress {
+.address {
     color: var(--white-text-color);
     font-size: 14px;
     line-height: 1.71;    
@@ -123,21 +144,23 @@ ul {
 
 /* Герой */
 
-.hero,
-.footer {
-    background-color: var(--footer-background-color);
-}
-
 .hero {
+    width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-color: #C4C4C4;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+
 
 .hero > .container {
     margin-left: auto;
     margin-right: auto;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 .text-hero {
@@ -331,7 +354,9 @@ ul {
     letter-spacing: 0.03em;
 }
 
-
+.footer {
+    background-color: var(--footer-background-color);
+}
 
 .footer .contact {
     line-height: 1.71;
@@ -351,7 +376,7 @@ ul {
 }
 
 
-.footer-adress li:not(:first-child) {
+.footer-address li:not(:first-child) {
     margin-top: 9px;
 }
 
@@ -362,7 +387,7 @@ ul {
 }
 
 
-.footer-adress {
+.footer-address {
     font-style: normal;
     margin-top: 20px;
 }
@@ -374,6 +399,16 @@ link:focus {
 }
 
 
+.footer .container {
+    display: flex;
+    gap: 70px;
+}
+
+.footer .secondary-header {
+    color: var(--white-text-color);
+    padding-top: 12px;
+    margin-bottom: 20px;
+}
 
 
 
@@ -464,9 +499,6 @@ link:focus {
     border-top: none;
 }
 
-.link img {
-    display: block;
-}
 
 .work-list .item:nth-child(3n) {
     margin-right: 0;
