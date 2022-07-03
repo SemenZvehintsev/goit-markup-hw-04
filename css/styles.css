@@ -33,7 +33,7 @@ body {
 }
 
 
-li {
+ul {
     list-style-type: none;
 }
 
@@ -48,8 +48,7 @@ h1,
 h2,
 h3,
 ul,
-p,
-ul {
+p {
     margin: 0;
     padding: 0;
 }
@@ -124,12 +123,17 @@ ul {
 
 
 .contact {
+    display: flex;
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     gap: 10px;
+}
+
+.contact-icon {
+    fill: currentColor;
 }
 
 
@@ -147,8 +151,7 @@ ul {
 /* Герой */
 
 .hero {
-    width: 1600px;
-    height: 600px;
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     margin-left: auto;
@@ -252,16 +255,14 @@ ul {
 .icon {
     display: flex;
     background-color: var(--secondary-background-color);
-    padding-top: 20px;
-    padding-bottom: 20px;
     margin-bottom: 30px;
     border-radius: 4px;
+    width: 270px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
 }
 
-.icon svg {
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .list .item:nth-last-child(1) {
     margin-right: 0;
@@ -364,23 +365,30 @@ ul {
     height: 44px;
 }
 
-.social.link {
+.social-link {
     width: 100%;
     height: 100%;
     color: var(--fill-color);
     border-radius: 50%;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.social-icon {
+    fill: currentColor;
+}
+
 
 .social.list {
     justify-content: center;
     gap: 10px;
 }
 
-.social.link:hover {
+.social .social-link:hover,
+.social .social-link:focus {
     background-color: var(--alternative-text-color);
-    fill: var(--primary-backgound-color);
+    color: var(--white-text-color);
 }
 
 
@@ -392,11 +400,24 @@ ul {
     margin-top: 50px;
 }
 
+.clients-item {
+    width: 170px;
+    height: 92px;
+}
+
 .client {
+    display: flex;
+    width: 100%;
+    height: 100%;
     color: var(--fill-color);
     border: 1px solid var(--fill-color);
     border-radius: 4px;
-    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-icon {
+    fill: currentColor;
 }
 
 .client:hover,
@@ -446,8 +467,6 @@ ul {
 
 .link {
     text-decoration: none;
-    display: flex;
-    fill: currentColor;
 }
 
 
@@ -463,8 +482,6 @@ link:focus {
 }
 
 
-
-
 .footer .container {
     display: flex;
     gap: 70px;
@@ -476,12 +493,25 @@ link:focus {
     margin-bottom: 20px;
 }
 
-.footer .social.link {
+.social-link-footer {
+    color: var(--white-text-color);
     background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.footer .social.link:hover {
+.social-link-footer:hover,
+.social-link-footer:focus {
     background-color: var(--alternative-text-color);
+    color: var(--white-text-color);
+}
+
+.social-icon-footer {
+    fill: currentColor;
 }
 
 
@@ -587,6 +617,7 @@ link:focus {
     display: block;
 }
 
+.work-list .link:hover,
 .work-list .link:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
